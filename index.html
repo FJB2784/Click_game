@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html onContextmenu="return false;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>じゃんけんゲーム</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body>
+    <div id="game">
+        <div id="contents">
+            <canvas id="cv" width="800" height="540"></canvas>
+            SR100ポイント R50ポイント N1ポイント
+        </div>
+
+        <div id="sidenavi">
+            <div id="meter">
+                <div id="UserName" onclick="requestFullScreen(myvideo);">ユーザー名:要ログイン</div>
+            </div>
+            <div id="meter">
+                <div id="Point" onclick="exitFull();">ポイント:要ログイン</div>
+            </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <input type="button" value="テストID読み込み" onclick="printIDmDummyWithoutServer();"> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="ゲームスタート" id="gacha" onclick="game_start()">
+                        <input type="button" value="ゲストとしてゲーム" id="gacha2" onclick="main()">
+                        <input type="button" value="クリック！！！" id ="ck_button" onclick="ck();">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="ログアウト" onclick="logout()">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+        <script type="text/javascript" src="js/account.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/nfc_client.js"></script>
+        <script type="text/javascript" src="js/yjdmd5.js"></script>
+    </div>
+</body>
+
+</html>
